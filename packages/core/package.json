@@ -1,6 +1,6 @@
 {
     "name": "@elizaos/core",
-    "version": "0.25.7",
+    "version": "0.25.8",
     "description": "",
     "type": "module",
     "main": "dist/index.js",
@@ -74,6 +74,7 @@
         "@types/uuid": "10.0.0",
         "ai": "4.1.16",
         "anthropic-vertex-ai": "1.0.2",
+        "bignumber.js": "9.1.2",
         "dotenv": "16.4.5",
         "fastembed": "1.14.1",
         "fastestsmallesttextencoderdecoder": "1.0.22",
@@ -82,7 +83,6 @@
         "handlebars": "^4.7.8",
         "js-sha1": "0.7.0",
         "js-tiktoken": "1.0.15",
-        "langchain": "0.3.6",
         "ollama-ai-provider": "0.16.1",
         "openai": "4.82.0",
         "pino": "^9.6.0",
