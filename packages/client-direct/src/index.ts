@@ -1041,11 +1041,11 @@ export const DirectClientInterface: Client = {
         client.start(serverPort);
         return client;
     },
-    // stop: async (_runtime: IAgentRuntime, client?: Client) => {
-    //     if (client instanceof DirectClient) {
-    //         client.stop();
-    //     }
-    // },
+    stop: async (_runtime: IAgentRuntime, client?: Client) => {
+        if (client instanceof DirectClient) {
+            client.stop();
+        }
+    },
 };
 
 const directPlugin: Plugin = {

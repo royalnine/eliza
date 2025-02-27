@@ -634,10 +634,14 @@ export type Client = {
 
     /** Start client connection */
     start: (runtime: IAgentRuntime) => Promise<ClientInstance>;
+    stop: any,
 };
 
+/**
+ * Database adapter initialization
+ */
 export type Adapter = {
-    /** Initialize adapter */
+    /** Initialize the adapter */
     init: (runtime: IAgentRuntime) => IDatabaseAdapter & IDatabaseCacheAdapter;
 };
 

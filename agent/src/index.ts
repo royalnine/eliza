@@ -28,6 +28,7 @@ import os from "os";
 import path from "path";
 import { fileURLToPath } from "url";
 import yargs from "yargs";
+import {TelegramClientInterface} from "@elizaos/client-telegram";
 
 const __filename = fileURLToPath(import.meta.url); // get the resolved path to the file
 const __dirname = path.dirname(__filename); // get the name of the directory
@@ -577,10 +578,12 @@ export async function initializeClients(
 ) {
     // each client can only register once
     // and if we want two we can explicitly support it
-    const clients: ClientInstance[] = [];
+    console.log(TelegramClientInterface)
+    const started_tg = await TelegramClientInterface.start(runtime);
+    const clients: ClientInstance[] = [started_tg];
     // const clientTypes = clients.map((c) => c.name);
     // elizaLogger.log("initializeClients", clientTypes, "for", character.name);
-
+    console.log("initializeClients", character.plugins);
     if (character.plugins?.length > 0) {
         for (const plugin of character.plugins) {
             if (plugin.clients) {
